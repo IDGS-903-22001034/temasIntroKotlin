@@ -33,5 +33,21 @@
         app:layout_constraintTop_toTopOf="parent"
 
         />
+    <Button
+        android:id="@+id/btnEjemplo3"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:text="Ejemplo3"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+    <Button
+        android:id="@+id/btnArchivos"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:text="Archivos"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
 
 </LinearLayout>
