@@ -13,6 +13,15 @@
         android:theme="@style/Theme.IntroKotlin903"
         tools:targetApi="31">
         <activity
+            android:name=".practicaDiccionario.BuscarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".practicaDiccionario.CapturarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".practicaDiccionario.MenuDiccionarioActivity"
+            android:exported="false" />
+        <activity
             android:name=".practica4.ArchivosActivity"
             android:exported="false" />
         <activity

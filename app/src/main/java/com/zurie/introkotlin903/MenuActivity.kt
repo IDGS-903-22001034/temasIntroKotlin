@@ -1,5 +1,6 @@
 package com.zurie.introkotlin903
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -12,8 +13,10 @@ import com.zurie.introkotlin903.practica1.saludoActivity
 import com.zurie.introkotlin903.practica2.OperasActivity
 import com.zurie.introkotlin903.practica3.Ejemplo3Activity
 import com.zurie.introkotlin903.practica4.ArchivosActivity
+import com.zurie.introkotlin903.practicaDiccionario.MenuDiccionarioActivity
 
 class MenuActivity : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -28,6 +31,8 @@ class MenuActivity : AppCompatActivity() {
         btnEjemplo3.setOnClickListener {navegateToEjemplo3()} // por medio de la funcion navegateToSaludo nos manda a la pantalla de saludo
         val btnArchivos = findViewById<Button>(R.id.btnArchivos) //vinculando los componentes de xml con kotlin
         btnArchivos.setOnClickListener {navegateToArchivos()} // por medio de la funcion navegateToSaludo nos manda a la pantalla de saludo
+        val btnMDiccionario = findViewById<Button>(R.id.btnMDiccionario) //vinculando los componentes de xml con kotlin
+        btnMDiccionario.setOnClickListener {navegateToMenuDiccionario()} // por medio de la funcion navegateToSaludo nos manda a la pantalla de saludo
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -57,6 +62,10 @@ class MenuActivity : AppCompatActivity() {
     }
     private fun navegateToArchivos() {
         val intent = Intent(this, ArchivosActivity::class.java)
+        startActivity(intent)
+    }
+    private fun navegateToMenuDiccionario() {
+        val intent = Intent(this, MenuDiccionarioActivity::class.java)
         startActivity(intent)
     }
 }

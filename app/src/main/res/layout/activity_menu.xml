@@ -49,5 +49,13 @@
         app:layout_constraintTop_toTopOf="parent"
 
         />
+    <Button
+        android:id="@+id/btnMDiccionario"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:text="Menú Diccionario"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
 
 </LinearLayout>
